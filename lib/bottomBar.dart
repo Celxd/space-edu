@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:space_edu/homepage.dart';
 import 'package:space_edu/moonPage.dart';
 import 'package:space_edu/planetsPage.dart';
 
+import 'home.dart';
 import 'solarSystemPage.dart';
 
 class bottomBar extends StatefulWidget {
@@ -16,7 +16,7 @@ class _bottomBarState extends State<bottomBar> {
   int _selectedIndex = 0;
   static const List<Widget> _pages = <Widget>[
   Center(
-    child: homepage(),
+    child: home(),
   ),
   Center(
     child: planetsPage(),
