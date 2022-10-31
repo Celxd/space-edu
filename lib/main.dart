@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:space_edu/bottomBar.dart';
+import 'package:space_edu/home.dart';
+import 'package:space_edu/homepage.dart';
 import 'package:space_edu/tabBar.dart';
 
 void main() {
@@ -26,7 +28,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const bottomBar(),
+      home: const home(),
     );
   }
 }

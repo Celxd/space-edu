@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:space_edu/homepage.dart';
 import 'package:space_edu/moonPage.dart';
 import 'package:space_edu/planetsPage.dart';
 
@@ -15,7 +16,7 @@ class _bottomBarState extends State<bottomBar> {
   int _selectedIndex = 0;
   static const List<Widget> _pages = <Widget>[
   Center(
-    child: solarSystemPage(),
+    child: homepage(),
   ),
   Center(
     child: planetsPage(),
@@ -35,7 +36,7 @@ class _bottomBarState extends State<bottomBar> {
         child: _pages.elementAt(_selectedIndex), //New
       ),
       bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
+        items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: 'Home',
