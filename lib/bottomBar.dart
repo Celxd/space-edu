@@ -24,35 +24,70 @@ class _bottomBarState extends State<bottomBar> {
   Center(
     child: moonPage(),
   ),
+  Center(
+    child: moonPage(),
+  ),
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Space App"),
-      ),
+      backgroundColor: Color.fromRGBO(15, 15, 46, 1),
       body: Center(
         child: _pages.elementAt(_selectedIndex), //New
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        items: [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
-
+      bottomNavigationBar: NavigationBarTheme(
+        data: NavigationBarThemeData(
+          indicatorColor: Color.fromRGBO(59, 76, 154, 1)
+        ),
+        child: Container(
+          height: 70,
+          child: ClipRRect(
+            borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(40),
+                        topRight: Radius.circular(40),
+                        bottomLeft: Radius.circular(0),
+                        bottomRight: Radius.circular(0),
+            ),
+            child: BottomNavigationBar(
+              selectedLabelStyle: TextStyle(
+                fontFamily: 'Mohave',
+                letterSpacing: 2,
+                fontSize: 16
+                ),
+              unselectedLabelStyle: TextStyle(
+                fontFamily: 'Mohave',
+                letterSpacing: 2,
+                fontSize: 16
+                ),
+              backgroundColor: Color.fromRGBO(38, 50, 105, 1),
+              items: const <BottomNavigationBarItem>[
+                BottomNavigationBarItem(
+                  icon: Icon(Icons.home_outlined),
+                  label: 'Home',
+                  backgroundColor: Color.fromRGBO(59, 76, 154, 1)
+                ),
+                BottomNavigationBarItem(
+                  icon: Icon(Icons.layers_outlined),
+                  label: 'Courses',
+                ),
+                BottomNavigationBarItem(
+                  icon: Icon(Icons.rocket_launch_outlined),
+                  label: 'Journey',
+                ),
+                BottomNavigationBarItem(
+                  icon: Icon(Icons.person_outline_outlined),
+                  label: 'Profile',
+                ),
+              ],
+              currentIndex: _selectedIndex,
+              selectedItemColor: Colors.white,
+              unselectedItemColor: Colors.white,
+              onTap: _onItemTapped,
+              type: BottomNavigationBarType.fixed,
+            ),
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.rocket_launch_outlined),
-            label: 'Journey',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.favorite_border_outlined),
-            label: 'Favorite',
-          ),
-          ],
-          currentIndex: _selectedIndex,
-          onTap: _onItemTapped,      
+        ),
       ),
     );
   }

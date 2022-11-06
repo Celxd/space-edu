@@ -35,6 +35,7 @@ class _homeState extends State<home> {
     setState(() {
       isloaded = true;
     });
+    print(_apodModel!.hdurl.toString());
   }
 
   @override
@@ -178,35 +179,6 @@ class _homeState extends State<home> {
                 ],
               ),
             ),
-            // Container(
-            //   child: Card(
-            //     color: Color.fromRGBO(38, 50, 105, 1),
-            //     shape: RoundedRectangleBorder(
-            //       borderRadius: BorderRadius.circular(40),
-            //     ),
-            //     child: Padding(
-            //       padding: const EdgeInsets.fromLTRB(13, 13, 0, 8),
-            //       child: ListTile(
-            //         contentPadding: EdgeInsets.all(0),
-            //         leading: Container(
-            //           decoration: BoxDecoration(
-            //             color: Color.fromRGBO(59, 76, 154, 1),
-            //           ),
-            //           child: Image(image: AssetImage('assets/icons/codicon_book.png'), width: 50, height: 50, fit: BoxFit.cover,),
-            //         ),
-            //         title: Text('History Of Space' , style: TextStyle(
-            //           color: Colors.white,
-            //           letterSpacing: 2,
-            //           fontFamily: GoogleFonts.outfit().fontFamily,
-            //           fontWeight: FontWeight.w600,
-            //           fontSize: 24,
-            //         ),),
-            //         subtitle: Text('Lesson 1'),
-                  
-            //       ),
-            //     ),
-            //   ),
-            // ),
             Container(
               margin: EdgeInsets.fromLTRB(0, 0, 0, 10),
               child: ClipRRect(
