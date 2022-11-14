@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:space_edu/moonPage.dart';
 import 'package:space_edu/planetsPage.dart';
 
-import 'home.dart';
-import 'solarSystemPage.dart';
+import '../Home/home.dart';
+import '../SolarSystem/solarSystemPage.dart';
 
 class bottomBar extends StatefulWidget {
   const bottomBar({super.key});

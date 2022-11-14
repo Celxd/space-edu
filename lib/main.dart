@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:space_edu/bottomBar.dart';
-import 'package:space_edu/home.dart';
-import 'package:space_edu/tabBar.dart';
+import 'package:space_edu/Bottom%20Navbar/bottomBar.dart';
+import 'package:space_edu/Home/home.dart';
+import 'package:space_edu/getStarted.dart';
 
 void main() {
   runApp(const MyApp());
@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const home(),
+      home: const getStarted(),
     );
   }
 }
